@@ -4,7 +4,8 @@ WORKDIR /app
 # Set the working directory inside the container
 COPY . .  
 # Copy all application files into the container
-RUN pip install flask  
+#RUN pip install flask --trusted-host pypi.org --trusted-host files.pythonhosted.org
+RUN pip install flask
 # Install Flask dependency
 CMD ["python", "app.py"]  
 # Define command to run the app
